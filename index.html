@@ -1,0 +1,141 @@
+<!--
+ * @Author: Elijah
+ * @Date: 2022-04-25 03:13:53
+ * @LastEditors: Elijah
+ * @LastEditTime: 2022-06-11 02:18:19
+ * @FilePath: \psn_nav\index.html
+ * @Description: 
+ * 山水一程，已是三生有幸！
+ * Copyright (c) 2022 by Elijah, All Rights Reserved. 
+ * @description: 
+ * @param: 
+ * @return: 
+-->
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nav-uniteor</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="https://elijah-cq-1256924628.file.myqcloud.com/blog/cropped-house30.png" />
+
+</head>
+
+<body>
+    <div class=" main">
+        <div class="header">
+            <div class="me-tx">
+                <a>
+                    <img alt="" src="./img/1595658626418.jpeg" class="long">
+
+                </a>
+            </div>
+            <div class="description">
+                <h1>Hello! o((>ω< ))o</h1> <p>山水一程，已是三生有幸！ 这是Elijah的个人导航页！</p>
+                        <p class="links-item-name ell">QQ：411916289</p>
+            </div>
+        </div>
+        <div class="index_element">
+            <section id="" class="content">
+                <h3 id="hitokoto_text">
+                    <script>
+                        fetch('https://v1.hitokoto.cn')
+                            .then(response => response.json())
+                            .then(data => {
+                                const hitokoto = document.getElementById('hitokoto_text')
+                                hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+                                hitokoto.innerText = data.hitokoto
+                            })
+                            .catch(console.error)
+                    </script>
+                </h3>
+            </section>
+            <section id="links" class="content">
+                <h3><a>我的站点</a></h3>
+                <div class="links-content flexbox">
+
+                    <div class="links-card flex-50">
+                        <div class="links-list-item">
+                            <a href="https://uniteor.cn " rel="external nofollow noreferrer noopener"
+                                title=" 槐根梦觉，苦尽甘来，花也喜欢，山也相爱。" target="_blank">
+                                <img class="links-avatar" alt=" 不止于此 " src="./img/40FEF424517F45628771B160CBD510BE.png">
+                                <div class="links-item-info">
+                                    <span class="links-item-name ell"> 拾光笔记 </span>
+                                    <span class="links-item-desc ell" title=" 比起尽我所能，我更喜欢全力以赴。">我们的征途是诗和远方</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="links-card flex-50">
+                        <div class="links-list-item">
+                            <a href="https://pan.uniteor.cn" rel="external nofollow noreferrer noopener"
+                                title=" 别怕路长梦远，总有星河照耀" target="_blank">
+                                <img class="links-avatar" alt=" 人间惊鸿 " src="./img/57C9E65BE112F85B2E5BC9A6EA6DD87A.png">
+                                <div class="links-item-info">
+                                    <span class="links-item-name ell"> 我不是盘神 o((>ω< ))o </span> <span
+                                            class="links-item-desc ell" title="与君初相识，犹如故人归。">远赴人间惊鸿宴</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="links-card flex-50">
+                        <div class="links-list-item">
+                            <a href="https://timemail.ce1estial.tech/ " rel="external nofollow noreferrer noopener"
+                                title=" 风尘仆仆，终有归途" target="_blank">
+                                <img class="links-avatar" alt=" 不负未来 " src="./img/A8E2C68932E4262DA88EA54B86EA645B.png">
+                                <div class="links-item-info">
+                                    <span class="links-item-name ell"> 拾光邮局 </span>
+                                    <span class="links-item-desc ell" title=" 一睹人间盛世颜"> 愿未来不负所期</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="links-card flex-50">
+                        <div class="links-list-item">
+                            <a href="https://github.com/Elijah-0616 " rel="external nofollow noreferrer noopener"
+                                title=" 这山川如酒，敬旷世温柔，至死方休" target="_blank">
+                                <img class="links-avatar" alt=" 相聚有时，后会无期 " src="./img/CFF6E66143AC4C164A252A55EEF6BA06.png">
+                                <div class="links-item-info">
+                                    <span class="links-item-name ell"> GitHub </span>
+                                    <span class="links-item-desc ell" title=" 我爱你人众皆知"> 夫风生于地，起于青苹之末，又弥散</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="powered_by">
+            <p id="ipInfo"></p>
+            <p id="ipAdr"></p>
+
+            <script>
+                fetch('http://ip-api.com/json/?lang=zh-CN#')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('ipInfo').innerText = ipInfo.innerText = "欢迎来自" + data.country +
+                            data.regionName + ' ' + data.city + "的访客"
+                        document.getElementById('ipAdr').innerText = "你的IP地址是：" + data.query
+                    })
+                    .catch(console.error)
+            </script>
+
+            <span><a href="https://beian.miit.gov.cn/" target="_blank"
+                    rel="nofollow noopener noreferrer">渝ICP备2022005290号</a></span>
+        </div>
+    </div>
+
+</body>
+
+</html>
